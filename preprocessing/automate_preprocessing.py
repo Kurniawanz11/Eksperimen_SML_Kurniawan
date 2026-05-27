@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 def preprocessing():
 
     # Load dataset
-    df = pd.read_csv("../dataset_raw/heart.csv")
+    df = pd.read_csv("dataset_raw/heart.csv")
 
 
     # Hapus duplikat
