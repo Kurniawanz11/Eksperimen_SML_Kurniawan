@@ -1,0 +1,48 @@
+name: Machine Learning Pipeline
+
+on:
+    push:
+
+jobs:
+    training_pipeline:
+        runs-on: ubuntu-latest
+
+        env:
+            DAGSHUB_USER_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}
+
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+
+            - name: Setup Python
+              uses: actions/setup-python@v5
+
+              with:
+                  python-version: "3.12"
+
+            - name: Install Dependencies
+              run: |
+
+                  pip install pandas
+                  pip install numpy
+                  pip install scikit-learn
+                  pip install mlflow==2.19.0
+                  pip install dagshub
+                  pip install joblib
+                  pip install matplotlib
+                  pip install seaborn
+
+            - name: Run Preprocessing
+              run: |
+
+                  python preprocessing/automate_preprocessing.py
+
+            - name: Run Modelling
+              run: |
+
+                  python Membangun_model/modelling.py
+
+            - name: Run Hyperparameter Tuning
+              run: |
+
+                  python Membangun_model/modelling_tuning.py

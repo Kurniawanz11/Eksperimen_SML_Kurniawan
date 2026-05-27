@@ -1,0 +1,15 @@
+artifact_uri: file:C:/Users/Kurniawanz/Desktop/Submission Machine Learning Terapan/SMSML_Kurniawan/Membangun_model/../mlruns/194753997654841365/639c9fcff5c441998c199cab926bef2b/artifacts
+end_time: 1779903051191
+entry_point_name: ''
+experiment_id: '194753997654841365'
+lifecycle_stage: active
+run_id: 639c9fcff5c441998c199cab926bef2b
+run_name: orderly-dove-257
+run_uuid: 639c9fcff5c441998c199cab926bef2b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1779903024235
+status: 3
+tags: []
+user_id: Kurniawanz

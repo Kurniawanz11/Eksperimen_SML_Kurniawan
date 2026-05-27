@@ -1,0 +1,15 @@
+artifact_uri: file:C:/Users/Kurniawanz/Desktop/Submission Machine Learning Terapan/SMSML_Kurniawan/Membangun_model/../mlruns/451880550952592883/f05aa5ef1bbb472281e58a3633dc78ac/artifacts
+end_time: 1779903231637
+entry_point_name: ''
+experiment_id: '451880550952592883'
+lifecycle_stage: active
+run_id: f05aa5ef1bbb472281e58a3633dc78ac
+run_name: polite-owl-279
+run_uuid: f05aa5ef1bbb472281e58a3633dc78ac
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1779903180165
+status: 3
+tags: []
+user_id: Kurniawanz
