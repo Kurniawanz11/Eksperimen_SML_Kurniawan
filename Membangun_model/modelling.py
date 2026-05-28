@@ -13,11 +13,11 @@ import os
 mlflow.set_tracking_uri("file:../mlruns")
 
 # Load data
-X_train = pd.read_csv("../preprocessing/X_train.csv")
-X_test = pd.read_csv("../preprocessing/X_test.csv")
+X_train = pd.read_csv("preprocessing/X_train.csv")
+X_test = pd.read_csv("preprocessing/X_test.csv")
 
-y_train = pd.read_csv("../preprocessing/y_train.csv")
-y_test = pd.read_csv("../preprocessing/y_test.csv")
+y_train = pd.read_csv("preprocessing/y_train.csv")
+y_test = pd.read_csv("preprocessing/y_test.csv")
 
 
 # MLflow experiment
