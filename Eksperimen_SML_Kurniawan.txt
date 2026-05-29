@@ -1,25 +1,27 @@
-Link Repository GitHub:
-https://github.com/Kurniawanz11/heart-disease-mlops
+Repository GitHub Eksperimen:
 
-Link Experiment Tracking DagsHub:
-https://dagshub.com/Kurniawanz11/heart-disease-mlops/experiments
+https://github.com/Kurniawanz11/Eksperimen_SML_Kurniawan
 
-Dataset:
-Heart Disease Dataset
+Dataset Raw:
+dataset_raw/heart.csv
 
 Notebook Eksperimen:
 preprocessing/Eksperimen_Kurniawan.ipynb
 
 Automasi Preprocessing:
-preprocessing/automate_preprocessing.py
+preprocessing/automate_Kurniawan.py
 
-Hasil Eksperimen:
+Hasil Preprocessing:
+preprocessing/heart_preprocessing/
+├── X_train.csv
+├── X_test.csv
+├── y_train.csv
+└── y_test.csv
 
-Experiment 1:
-Heart_Disease_Model
+Eksperimen yang dilakukan:
 
-Experiment 2:
-Heart_Disease_Tuning
+1. Heart_Disease_Model
+2. Heart_Disease_Tuning
 
 Model Terbaik:
 Random Forest
@@ -31,3 +33,6 @@ Best Parameter:
 n_estimators = 100
 max_depth = 10
 min_samples_split = 5
+
+Link DagsHub (referensi experiment tracking):
+https://dagshub.com/Kurniawanz11/heart-disease-mlops/experiments
