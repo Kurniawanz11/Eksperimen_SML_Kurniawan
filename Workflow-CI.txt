@@ -1,0 +1,11 @@
+Repository GitHub:
+https://github.com/Kurniawanz11/Eksperimen_SML_Kurniawan
+
+GitHub Actions:
+https://github.com/Kurniawanz11/Eksperimen_SML_Kurniawan/actions
+
+Workflow yang dibuat:
+1. Preprocessing Workflow
+2. Machine Learning Pipeline
+
+Kedua workflow berhasil dijalankan menggunakan GitHub Actions.

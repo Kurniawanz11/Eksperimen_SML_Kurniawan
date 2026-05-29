@@ -19,17 +19,17 @@ dagshub.init(
 
 # Tracking URI
 # mlflow.set_tracking_uri("file:../mlruns")
-
+mlflow.set_tracking_uri("file:mlruns")
 # Experiment
 mlflow.set_experiment("Heart_Disease_Tuning")
-
+mlflow.autolog()
 
 # Load data
-X_train = pd.read_csv("preprocessing/X_train.csv")
-X_test = pd.read_csv("preprocessing/X_test.csv")
+X_train = pd.read_csv("preprocessing/heart_preprocessing/X_train.csv")
+X_test = pd.read_csv("preprocessing/heart_preprocessing/X_test.csv")
 
-y_train = pd.read_csv("preprocessing/y_train.csv")
-y_test = pd.read_csv("preprocessing/y_test.csv")
+y_train = pd.read_csv("preprocessing/heart_preprocessing/y_train.csv")
+y_test = pd.read_csv("preprocessing/heart_preprocessing/y_test.csv")
 
 
 with mlflow.start_run():
@@ -102,12 +102,12 @@ with mlflow.start_run():
     # Save model
     joblib.dump(
         best_model,
-        "best_random_forest.pkl"
+        "Membangun_model/best_random_forest.pkl"
     )
 
     # Log artifact
     mlflow.log_artifact(
-        "best_random_forest.pkl"
+        "Membangun_model/best_random_forest.pkl"
     )
 
     # Classification report
@@ -117,14 +117,14 @@ with mlflow.start_run():
     )
 
     with open(
-        "classification_report_tuning.txt",
+        "Membangun_model/classification_report_tuning.txt",
         "w"
     ) as f:
 
         f.write(report)
 
     mlflow.log_artifact(
-        "classification_report_tuning.txt"
+        "Membangun_model/classification_report_tuning.txt"
     )
 
     # Log model

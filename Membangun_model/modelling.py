@@ -10,19 +10,19 @@ from sklearn.metrics import confusion_matrix
 import os
 
 
-mlflow.set_tracking_uri("file:../mlruns")
+mlflow.set_tracking_uri("file:mlruns")
 
 # Load data
-X_train = pd.read_csv("preprocessing/X_train.csv")
-X_test = pd.read_csv("preprocessing/X_test.csv")
+X_train = pd.read_csv("preprocessing/heart_preprocessing/X_train.csv")
+X_test = pd.read_csv("preprocessing/heart_preprocessing/X_test.csv")
 
-y_train = pd.read_csv("preprocessing/y_train.csv")
-y_test = pd.read_csv("preprocessing/y_test.csv")
+y_train = pd.read_csv("preprocessing/heart_preprocessing/y_train.csv")
+y_test = pd.read_csv("preprocessing/heart_preprocessing/y_test.csv")
 
 
 # MLflow experiment
 mlflow.set_experiment("Heart_Disease_Experiment")
-
+mlflow.autolog()
 
 with mlflow.start_run():
 
@@ -48,31 +48,31 @@ with mlflow.start_run():
     mlflow.log_metric("accuracy", accuracy)
 
     # Save model
-    joblib.dump(model, "random_forest_model.pkl")
+    joblib.dump(model, "Membangun_model/random_forest_model.pkl")
 
     # Logging artifact
-    mlflow.log_artifact("random_forest_model.pkl")
+    mlflow.log_artifact("Membangun_model/random_forest_model.pkl")
 
     # Classification report
     report = classification_report(y_test, y_pred)
 
-    with open("classification_report.txt", "w") as f:
+    with open("Membangun_model/classification_report.txt", "w") as f:
         f.write(report)
 
-    mlflow.log_artifact("classification_report.txt")
+    mlflow.log_artifact("Membangun_model/classification_report.txt")
 
     # Confusion matrix
     cm = confusion_matrix(y_test, y_pred)
 
-    with open("confusion_matrix.txt", "w") as f:
+    with open("Membangun_model/confusion_matrix.txt", "w") as f:
         f.write(str(cm))
 
-    mlflow.log_artifact("confusion_matrix.txt")
+    mlflow.log_artifact("Membangun_model/confusion_matrix.txt")
 
     # Log model
     mlflow.sklearn.log_model(
         model,
-        "random_forest_model"
+        "Membangun_model/random_forest_model"
     )
 
     print("Training selesai")

@@ -26,4 +26,4 @@ jobs:
             - name: Run Preprocessing
               run: |
 
-                  python preprocessing/automate_preprocessing.py
+                  python preprocessing/automate_Kurniawan.py

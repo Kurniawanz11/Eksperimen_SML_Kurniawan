@@ -1,3 +1,7 @@
 mlruns/
 .venv/
+<<<<<<< HEAD
 __pycache__/
+=======
+__pycache__/
+>>>>>>> 0de67a7 (Fix reviewer feedback and restructure project)

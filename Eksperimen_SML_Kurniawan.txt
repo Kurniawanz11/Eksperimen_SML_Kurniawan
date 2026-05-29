@@ -1,0 +1,33 @@
+Link Repository GitHub:
+https://github.com/Kurniawanz11/heart-disease-mlops
+
+Link Experiment Tracking DagsHub:
+https://dagshub.com/Kurniawanz11/heart-disease-mlops/experiments
+
+Dataset:
+Heart Disease Dataset
+
+Notebook Eksperimen:
+preprocessing/Eksperimen_Kurniawan.ipynb
+
+Automasi Preprocessing:
+preprocessing/automate_preprocessing.py
+
+Hasil Eksperimen:
+
+Experiment 1:
+Heart_Disease_Model
+
+Experiment 2:
+Heart_Disease_Tuning
+
+Model Terbaik:
+Random Forest
+
+Accuracy:
+0.84
+
+Best Parameter:
+n_estimators = 100
+max_depth = 10
+min_samples_split = 5
