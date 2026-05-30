@@ -12,32 +12,38 @@ from sklearn.metrics import (
 )
 
 import os
+import dagshub
 
+dagshub.init(
+    repo_owner="Kurniawanz11",
+    repo_name="heart-disease-mlops",
+    mlflow=True
+)
 # ==========================================
 # Load Dataset
 # ==========================================
 
 X_train = pd.read_csv(
-    "heart_preprocessing/X_train.csv"
+    "preprocessing/heart_preprocessing/X_train.csv"
 )
 
 X_test = pd.read_csv(
-    "heart_preprocessing/X_test.csv"
+    "preprocessing/heart_preprocessing/X_test.csv"
 )
 
 y_train = pd.read_csv(
-    "heart_preprocessing/y_train.csv"
+    "preprocessing/heart_preprocessing/y_train.csv"
 )
 
 y_test = pd.read_csv(
-    "heart_preprocessing/y_test.csv"
+    "preprocessing/heart_preprocessing/y_test.csv"
 )
 
 # ==========================================
 # MLflow Experiment
 # ==========================================
 
-mlflow.set_tracking_uri("file:mlruns")
+#mlflow.set_tracking_uri("file:mlruns")
 mlflow.set_experiment("Heart_Disease_Tuning")
 
 # ==========================================

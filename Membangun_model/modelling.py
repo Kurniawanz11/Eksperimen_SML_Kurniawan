@@ -8,9 +8,16 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 import os
+import dagshub
 
 
-mlflow.set_tracking_uri("file:mlruns")
+dagshub.init(
+    repo_owner="Kurniawanz11",
+    repo_name="heart-disease-mlops",
+    mlflow=True
+)
+
+#mlflow.set_tracking_uri("file:mlruns")
 
 # Load data
 X_train = pd.read_csv("preprocessing/heart_preprocessing/X_train.csv")
