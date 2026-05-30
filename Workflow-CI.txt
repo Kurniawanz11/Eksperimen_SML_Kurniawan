@@ -1,11 +1,13 @@
-Repository GitHub:
-https://github.com/Kurniawanz11/Eksperimen_SML_Kurniawan
+Workflow CI Repository
 
-GitHub Actions:
-https://github.com/Kurniawanz11/Eksperimen_SML_Kurniawan/actions
+GitHub Repository:
+https://github.com/Kurniawanz11/Workflow-CI_Kurniawan
 
 Workflow yang dibuat:
 1. Preprocessing Workflow
-2. Machine Learning Pipeline
+2. CI/CD MLflow Workflow
 
+Status:
 Kedua workflow berhasil dijalankan menggunakan GitHub Actions.
+
+Bukti workflow dapat dilihat pada repository di atas pada menu Actions.

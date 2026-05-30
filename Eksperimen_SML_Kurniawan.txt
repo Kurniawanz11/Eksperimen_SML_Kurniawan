@@ -1,9 +1,12 @@
-Repository GitHub Eksperimen:
+Nama Proyek:
+Heart Disease Prediction MLOps
 
+Repository GitHub:
 https://github.com/Kurniawanz11/Eksperimen_SML_Kurniawan
 
-Dataset Raw:
-dataset_raw/heart.csv
+Dataset:
+Heart Disease Dataset
+Lokasi: dataset_raw/heart.csv
 
 Notebook Eksperimen:
 preprocessing/Eksperimen_Kurniawan.ipynb
@@ -18,21 +21,32 @@ preprocessing/heart_preprocessing/
 ├── y_train.csv
 └── y_test.csv
 
-Eksperimen yang dilakukan:
+Eksperimen Model:
 
 1. Heart_Disease_Model
+   - Algoritma: Random Forest Classifier
+   - Accuracy: 0.8361
+
 2. Heart_Disease_Tuning
+   - Algoritma: Random Forest Classifier
+   - Hyperparameter Tuning: GridSearchCV
+   - Accuracy: 0.8361
 
 Model Terbaik:
-Random Forest
-
-Accuracy:
-0.84
+Random Forest Classifier
 
 Best Parameter:
-n_estimators = 100
-max_depth = 10
-min_samples_split = 5
+- n_estimators = 100
+- max_depth = 10
+- min_samples_split = 5
 
-Link DagsHub (referensi experiment tracking):
+Experiment Tracking:
 https://dagshub.com/Kurniawanz11/heart-disease-mlops/experiments
+
+Artefak Model:
+- random_forest_model.pkl
+- classification_report.txt
+- confusion_matrix.txt
+
+Status:
+Eksperimen, preprocessing, experiment tracking, monitoring, logging, dan workflow CI/CD berhasil dijalankan.
