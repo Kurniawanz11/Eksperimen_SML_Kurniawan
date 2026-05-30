@@ -1,13 +1,40 @@
-Workflow CI Repository
+Repository Workflow-CI:
 
-GitHub Repository:
 https://github.com/Kurniawanz11/Workflow-CI_Kurniawan
 
-Workflow yang dibuat:
-1. Preprocessing Workflow
-2. CI/CD MLflow Workflow
+Struktur Repository:
 
-Status:
-Kedua workflow berhasil dijalankan menggunakan GitHub Actions.
+Workflow-CI_Kurniawan
+├── .github/workflows
+│   └── ml_pipeline.yml
+├── MLProject
+│   ├── modelling.py
+│   ├── conda.yaml
+│   ├── MLproject
+│   └── heart_preprocessing
+└── README.md
 
-Bukti workflow dapat dilihat pada repository di atas pada menu Actions.
+Workflow CI/CD:
+
+1. Checkout Repository
+2. Setup Python 3.12
+3. Check Environment
+4. Install Dependencies
+5. Set MLflow Tracking URI
+6. Run MLflow Project
+7. Upload to GitHub Artifacts
+
+Perintah utama workflow:
+
+mlflow run MLProject --env-manager=local
+
+Status Workflow:
+GitHub Actions berhasil dijalankan (Success).
+
+Artifact Storage:
+GitHub Artifacts digunakan untuk menyimpan hasil workflow secara otomatis.
+
+MLflow Project:
+Training model dijalankan menggunakan MLProject sesuai ketentuan submission.
+
+Repository ini dibuat khusus untuk memenuhi Kriteria Workflow-CI dan dipisahkan dari repository eksperimen sesuai arahan reviewer.
